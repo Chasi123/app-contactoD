@@ -1,19 +1,24 @@
 import { HttpClient } from "@angular/common/http";
-import { Component, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
+import { Producto } from "./productos";
 
 @Component({
   selector: 'app-productos',
   templateUrl: './productos.component.html',
   styleUrls: ['./productos.component.css']
 })
-export class ProductosComponent implements OnInit {
+export class ProductosComponent {
   productos: any[] = [];
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+
+  }
+  usuarios: Producto[] = [];
 
   ngOnInit() {
-    this.http.get<any[]>('assets/producto.json').subscribe(data => {
+    this.http.get<Producto[]>('assets/producto.json').subscribe(data => {
       this.productos = data;
     });
   }
+
 }
