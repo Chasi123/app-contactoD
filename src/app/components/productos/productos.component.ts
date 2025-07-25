@@ -1,24 +1,37 @@
-import { HttpClient } from "@angular/common/http";
-import { Component } from "@angular/core";
-import { Producto } from "./productos";
+import { Component } from '@angular/core';
+import { Producto } from './productos';
+import { HttpClient } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-productos',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './productos.component.html',
   styleUrls: ['./productos.component.css']
 })
 export class ProductosComponent {
-  productos: any[] = [];
 
-  constructor(private http: HttpClient) {
+  productos: Producto[] = [];
+  productosFiltrados: Producto[] = [];
+  esMayorDeEdad: boolean = false;
 
-  }
-  usuarios: Producto[] = [];
+  constructor(private http: HttpClient) { }
 
-  ngOnInit() {
-    this.http.get<Producto[]>('assets/producto.json').subscribe(data => {
+  ngOnInit(): void {
+    this.http.get<Producto[]>('assets/productos.json').subscribe(data => {
       this.productos = data;
+      this.productosFiltrados = data;  
     });
   }
 
+  verificarEdad(esMayor: boolean): void {
+    this.esMayorDeEdad = esMayor;
+
+    if (esMayor) {
+      this.productosFiltrados = this.productos.filter(producto => producto.edadMinima <= 18);
+    } else {
+      this.productosFiltrados = this.productos.filter(producto => producto.edadMinima === 0);
+    }
+  }
 }

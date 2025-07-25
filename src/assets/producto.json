@@ -4,53 +4,43 @@
     "nombre": "Guitarra Eléctrica Fender Stratocaster",
     "categoria": "Guitarras",
     "descripcion": "Guitarra eléctrica de alta calidad con cuerpo de aliso y mástil de arce.",
-    "precio": 899.99,
-    "imagen": "https://images.unsplash.com/photo-1511376777868-611b54f68947?auto=format&fit=crop&w=400&q=80",
-    "stock": 12
+    "imagenUrl": "https://images.unsplash.com/photo-1511376777868-611b54f68947?auto=format&fit=crop&w=400&q=80"
+
   },
   {
     "id": 2,
     "nombre": "Guitarra Acústica Yamaha FG800",
     "categoria": "Guitarras",
     "descripcion": "Guitarra acústica con tapa de pícea sólida, perfecta para principiantes y profesionales.",
-    "precio": 199.99,
-    "imagen": "https://images.unsplash.com/photo-1519666213634-6f55b5c76a5a?auto=format&fit=crop&w=400&q=80",
-    "stock": 20
+    "imagenUrl": "https://images.unsplash.com/photo-1519666213634-6f55b5c76a5a?auto=format&fit=crop&w=400&q=80"
+
   },
   {
     "id": 3,
     "nombre": "Piano Digital Yamaha P-125",
     "categoria": "Pianos",
     "descripcion": "Piano digital portátil con sonido auténtico de piano acústico y teclas de acción de martillo graduado.",
-    "precio": 649.00,
-    "imagen": "https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?auto=format&fit=crop&w=400&q=80",
-    "stock": 8
+    "imagenUrl": "https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?auto=format&fit=crop&w=400&q=80"
   },
   {
     "id": 4,
     "nombre": "Teclado MIDI Akai MPK Mini",
     "categoria": "Teclados",
     "descripcion": "Teclado MIDI compacto con pads sensibles y controles para producción musical en estudio o en vivo.",
-    "precio": 119.99,
-    "imagen": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=400&q=80",
-    "stock": 25
+    "imagenUrl": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=400&q=80"
   },
   {
     "id": 5,
     "nombre": "Bajo Eléctrico Ibanez GSR200",
-    "categoria": "Bajos",
     "descripcion": "Bajo eléctrico con cuerpo liviano, ideal para principiantes y sonido versátil.",
-    "precio": 299.99,
-    "imagen": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=400&q=80",
-    "stock": 15
+    "imagenUrl": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=400&q=80"
   },
   {
     "id": 6,
     "nombre": "Amplificador Fender Mustang LT25",
     "categoria": "Amplificadores",
     "descripcion": "Amplificador de guitarra con múltiples efectos digitales y modelos de amplis clásicos.",
-    "precio": 179.99,
-    "imagen": "https://images.unsplash.com/photo-1512443951407-1ee95c199ec9?auto=format&fit=crop&w=400&q=80",
-    "stock": 10
+    "imagenUrl": "https://images.unsplash.com/photo-1512443951407-1ee95c199ec9?auto=format&fit=crop&w=400&q=80"
+  
   }
 ]

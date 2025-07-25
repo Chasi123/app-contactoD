@@ -1,47 +1,128 @@
+/* Tipografía y colores generales */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f6f6fa;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
 
-    main {
-      max-width: 900px;
-      margin: 30px auto;
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    h1 {
-      color: #4a148c;
-      letter-spacing: 0.1em;
-    }
-    .productos {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 20px;
-    }
-    .producto {
-      background: #fafafa;
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      padding: 10px;
-      width: 200px;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      transition: transform 0.3s ease;
-      cursor: pointer;
-    }
-    .producto:hover {
-      transform: scale(1.05);
-    }
-    .producto img {
-      max-width: 100%;
-      border-radius: 4px;
-    }
-    footer {
-      text-align: center;
-      padding: 15px;
-      background-color: #eee;
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #666;
-      letter-spacing: 0.05em;
-    }
+/* Estilos del header */
+header {
+  background: linear-gradient(to right, #6a1b9a, #9c27b0);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 36px;
+  letter-spacing: 2px;
+  animation: fadeIn 1.2s ease-out;
+}
+
+header p {
+  margin-top: 8px;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* Contenido principal */
+main {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+main h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #6a1b9a;
+  animation: slideDown 0.8s ease;
+}
+
+.intro {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Sección de productos */
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+  padding: 0 20px;
+}
+
+.producto {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.producto:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.producto img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.producto h3 {
+  font-size: 18px;
+  margin: 0 0 5px;
+  color: #444;
+}
+
+.producto p {
+  font-size: 16px;
+  color: #6a1b9a;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background: #6a1b9a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 14px;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
