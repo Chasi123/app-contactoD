@@ -8,9 +8,7 @@
 
 <div class="tabla-contenedor" *ngIf="esMayorDeEdad">
   <table class="tabla-productos">
-    @for (producto of productos; track productos) {
     <thead>
-      
       <tr>
         <th>Imagen</th>          
         <th>Nombre</th>
@@ -18,14 +16,13 @@
       </tr>
     </thead>
     <tbody>
-      
+      <tr *ngFor="let producto of productosFiltrados">
         <td>
           <img [src]="producto.imagenUrl" alt="{{ producto.nombre }}" class="imagen-producto" />
         </td>
         <td>{{ producto.nombre }}</td>
         <td>{{ producto.descripcion }}</td>
-      
+      </tr>
     </tbody>
-    }
   </table>
 </div>
