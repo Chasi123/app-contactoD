@@ -18,8 +18,8 @@ export class ProductosComponent {
 
   constructor(private http: HttpClient) { }
 
-  ngOnInit(): void {
-    this.http.get<Producto[]>('src/assets/productos.json').subscribe(data => {
+  ngOnInit() {
+    this.http.get<Producto[]>('assets/productos.json').subscribe(data => {
       this.productos = data;
       this.productosFiltrados = data;  
     });

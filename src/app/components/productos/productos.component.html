@@ -1,28 +1,37 @@
-<h2 class="titulo">Galería de Productos</h2>
+<h2 class="titulo text-center">Galería de Productos</h2>
 
 <div class="edad-check">
-  <h2 class="titulo">Dessea ver los productos ? </h2>
-  <button (click)="verificarEdad(true)">Si</button>
-  <button (click)="verificarEdad(false)">No</button>
+  <h2 class="titulo">¿Desea ver los productos?</h2>
+  <button onclick="verificarEdad(true)">Sí</button>
+  <button onclick="verificarEdad(false)">No</button>
 </div>
 
-<div class="tabla-contenedor" *ngIf="esMayorDeEdad">
-  <table class="tabla-productos">
-    <thead>
-      <tr>
-        <th>Imagen</th>          
-        <th>Nombre</th>
-        <th>Descripción</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let producto of productosFiltrados">
-        <td>
-          <img [src]="producto.imagenUrl" alt="{{ producto.nombre }}" class="imagen-producto" />
-        </td>
-        <td>{{ producto.nombre }}</td>
-        <td>{{ producto.descripcion }}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<section class="productos-container">
+  <div class="mx-auto max-w-screen-xl px-4 lg:px-12">
+    <div class="productos-card">
+      <div class="overflow-x-auto">
+        <table class="productos-table">
+          <thead>
+            <tr>
+              <th scope="col">Nombre</th>
+              <th scope="col">Imagen</th>
+              <th scope="col">Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for(productos of productos; track productos.id){
+            <tr>
+              <td>{{productos.nombre}}</td>
+              <td>
+                <img [src]="productos.imagenUrl" alt="{{productos.nombre}}" class="productos-img" />
+              </td>
+              <td class="descripcion">{{productos.descripcion}}</td>
+              <td></td>
+            </tr>}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
